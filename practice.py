@@ -82,13 +82,39 @@ print(tup1[-3]) #3
 
 tre = True
 fls = False
-gg = true # an error
+#gg = true # an error
 print(tre)
 
 # 4. Set Data type
+"""Set are unordered, do  not allow duplicate, but unique
+can be initailize with set() func/constructor or set literal asin
+{1,2,3}....."""
+s1 = set("HelloooX")
+print(s1) #
+n = [1,2,3,6, 3, 4, 2, 1, 0]
+s2 = set(n)
+print(s2)
+#mixed 
+mixed = {1, 4.56, "hello", True}
+print(mixed)
 
+#acess set items
 
+set1 = set(["i", "love","coding"])
+print(set1)
+#loop through the set
+for i in set1:
+    print(i, end=" ")
+#check if the item exist
+print("coding" in set1)
 
 # 5. Dictionary Data type
+d = {1 : "for", 2: "hi", 3: "there"}
+print(d)
+d1 = dict({1 : "so", 2: "hi", 3: "there"})
+print(d1)
 
-
+#acessing an elemnt
+dd = {1 : "for", "name": "hi", 3: "there"}
+print(dd.get("name"))
+print(dd[1])
