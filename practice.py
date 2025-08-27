@@ -118,3 +118,15 @@ print(d1)
 dd = {1 : "for", "name": "hi", 3: "there"}
 print(dd.get("name"))
 print(dd[1])
+
+#list basic operations
+frr = ["apple", "banana", "orange"]
+frr.append("melon")
+frr.remove("orange")
+print(frr)
+
+#"basic tuple operation"
+cord = (3, 5)
+print(cord)
+print("x coordinate:", cord[0])
+print("y coordinate:", cord[1])
