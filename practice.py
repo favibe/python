@@ -1,3 +1,4 @@
+"""
 print("Hello World!")
 # variables
 a = "Soap"
@@ -51,5 +52,43 @@ num = int(input("Enter a value: "))
 add = num + 5
 # Output
 print("The sum is %d" % add)
+
+"""
+#data types
+# 1. Numeric Data type
+
+a = 5 #integer
+b = 34.13 #float
+c = 3 + 5j #complex number
+
+# 2. Sequence Data type
+
+str = "A string" #string
+li = [1,2,3] #list 
+tup = ("i", "love", "it", "here")  #tuple
+print(tup)
+
+#Accessing list items
+list = ["book", "power", "success", "win", "growth", "love"]
+print(list[0]) #book
+print(list[-2]) # growth. # list can be acess with +ve and -ve index.
+
+#Accesssing tuple item
+tup1 = ([1, 2, 3, 4, 5])
+print(tup1[0]) #1
+print(tup1[-3]) #3
+
+# 3. Boolean Data type
+
+tre = True
+fls = False
+gg = true # an error
+print(tre)
+
+# 4. Set Data type
+
+
+
+# 5. Dictionary Data type
 
 
