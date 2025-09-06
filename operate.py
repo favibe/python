@@ -59,3 +59,88 @@ if (y in list):
     print("y is present")
 else:
    print("y is Not present in the list")
+
+
+
+#Conditional sttaement
+marks = 25
+if marks <=30:
+    print("Pass")
+else :
+    print("fail")
+#Shorthand Ternanry Operator way
+mark = 25
+total = "pass" if mark <=30 else "fail"
+print(total)
+
+#elif condition
+age = 25
+if age <= 12:
+    print("child")
+elif age <=19:
+    print("Teenager")
+elif age <= 25:
+    print("Young Adult")
+else:
+    print("Adult")
+
+#Nested if sttsement
+age1 = 70
+is_member = True
+
+if age1 >= 60:
+    if is_member:
+        print("30% Senior Discount")
+    else:
+        print("20% Senior Discount")
+else:
+ print("Not Eligible for Senior Discount")
+
+ #ex2
+mark2 = 85
+if mark2 >= 50:
+    if mark2 >= 90:
+        print("A+")
+    elif mark2 >= 75:
+        print("A")
+    else:
+        print("B")
+else:
+     print("Fail")
+
+#ex3
+age2 =  20
+citizen = True
+voter = True
+if age >= 18:
+    if citizen:
+        if voter:
+            print("eligible to vote")
+        else:
+            print("Need voter card")
+    else:
+        print("not a citizen")
+else:
+    print("Too young")
+
+#ex4
+n = -4
+if n >= 0:
+    if n % 2 == 0:
+        print("Positive Even")
+    else:
+        print("Positive Odd")
+else:
+    if n % 2 == 0:
+        print("Negative Even")
+    else:
+        print("Negative Odd")
+
+#Check if user have balanmce to buy an item
+balance = float(input("Enter Your Bslance: "))
+price = float(input("Enter item Price: "))
+if balance > price:
+    print("Purchase Successful")
+else:
+    print("Insufficient Funds")
+
