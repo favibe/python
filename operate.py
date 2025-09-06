@@ -157,3 +157,72 @@ else:
         return False
         """
 #Control Loop
+nn = 4
+for i in range(0, nn):
+    print(i)
+#2
+s = "geeks"
+for i in s:
+    print(i)
+#3
+li = ["geek", 1, "here"]
+for i in li:
+    print(i)
+    #or we can iterate with index, bt first knowing it lenght
+for index in range(len(li)):
+    print(li[index])
+#4 Same thing for set{1,2,3,4,5} and tup("cup","spoon")
+#5
+d = dict({'x':123, 'y':354})
+for i in d:
+    print("%s  %d" % (i, d[i])) 
+
+# using else statement with for loop
+for i in range(5):
+    print(i)
+else:
+    print("Loop successfully")
+    # this will print o-4 and still print the else blocck ststemrnt
+# else for loop with break
+for i in range(5):
+    print(i)
+    if i == 2:
+        break
+else:
+    print("looped successfully")
+# Hee the break ststement will stop the loop once i = 2, and break the loop that way the else won't print
+
+#WHILE LOOP
+cnt = 0
+while (cnt < 3):
+    cnt = cnt + 1
+    print("Helllo Woeld")
+#2
+count = 1
+while(count <= 5):
+    print("Count is:", count)
+    count += 1
+#using else statement with While loop
+#nested loop (in python can have a for loop in while loop and vice versa)
+
+for i in range(1, 4):          # outer loop
+    for j in range(1, 4):      # inner loop
+        print(i, "*", j, "=", i * j)
+    print("-----")  # separates each row
+#2
+from __future__ import print_function
+for i in range(1, 5):
+    for j in range(i):
+        print(i, end=' ')
+    print()
+#CONTROL STATEMENT
+for letter in 'geeksforgeeks':
+    if letter == 'e' or letter == 's':
+        continue
+    print('Current Letter :', letter)
+#2
+for letter in 'geeksforgeeks':
+    if letter == 'e' or letter == 's':
+        break
+
+print('Current Letter :', letter)
