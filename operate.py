@@ -143,4 +143,17 @@ if balance > price:
     print("Purchase Successful")
 else:
     print("Insufficient Funds")
+"""EXCERCISE FROM GFG
 
+     class Solution:
+    def checkStatus(self, a, b, flag):
+        # code here
+        if flag == False:
+            if (a>= 0 and b <0) or (a <0 and b>= 0):
+             return True
+        if flag == True:
+            if  a < 0 and b < 0:
+             return True
+        return False
+        """
+#Control Loop
