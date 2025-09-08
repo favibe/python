@@ -210,7 +210,6 @@ for i in range(1, 4):          # outer loop
         print(i, "*", j, "=", i * j)
     print("-----")  # separates each row
 #2
-from __future__ import print_function
 for i in range(1, 5):
     for j in range(i):
         print(i, end=' ')
@@ -226,3 +225,15 @@ for letter in 'geeksforgeeks':
         break
 
 print('Current Letter :', letter)
+#LOOP PRACTICE PROBLEM
+print("---#LOOP PRACTICE PROBLEM---")
+#1Print each items in a shopping list
+items = input("Enter shopping items seperated by a comma: ").split(",")
+for item in items:
+    print("Buy", item.strip())
+#2 print the number of saquare from number 1, to number provodee
+n = 6
+for i in range(1, n+1):
+    print("square of", i, "is", i**2)
+#3 print mutiplication table
+
