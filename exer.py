@@ -42,3 +42,35 @@ def fun1():
     fun2()
 fun1()
 #Anonymous Functions
+square = lambda n: n*n
+print(square(4))
+#2
+check = lambda x: "Even" if x % 2 == 0 else "Odd"
+print(check(7))
+#3
+add = lambda x, y: x + y
+print(add(2,4))
+#passs by onject reference
+# Function modifies the first element of list
+def myFun(x):
+    x[0] = 20
+
+lst = [10, 11, 12, 13]
+myFun(lst)
+print(lst)   # list is modified
+
+# Function tries to modify an integer
+def myFun2(x):
+    x = 20
+
+a = 10
+myFun2(a)
+print(a)     # integer is not modified
+#Recursive Function
+def factorial(n):
+    if n == 0:   # base case
+        return 1
+    else:        # recursive case
+        return n * factorial(n - 1)
+
+print(factorial(5))  # 120
