@@ -20,4 +20,6 @@ show_product()
 
 #Add Item To Cart
 def add_item():
-    
+    while True:
+        int(input("\nEnter a product"))
+        
