@@ -235,3 +235,26 @@ a = array.array('i', [1, 2, 3, 4, 5])
 a.reverse()
 print(*a)
 #LIST COMPREHENSION
+#list comprehension
+a = [2, 3, 4, 5]
+res = [x**2 for x in a]
+print(res)
+#using for loop to do this will be:
+aa =[1,2,3,4,5]
+rest = []
+for val in aa:
+    rest.append(val * 2)
+print(res)
+#ex2
+res1 = [y for y in aa if y % 2 == 0]
+print(res1)
+#ex3 creating a list from range
+list = [a for a in range(10)]
+print(list)
+#ex4 nested list
+d = [(x,y) for x in range(3) for y in range(3)]
+print(d)
+#ex5 flatten a list
+mat = [[1,2,3], [4,5,6],[7,8,9]]
+res2 = [val for row in  mat for val in row]
+print(res2)
