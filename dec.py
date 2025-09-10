@@ -89,4 +89,66 @@ for value in d.values():
 # Iterate over key-value pairs
 for key, value in d.items():
     print(f"{key}: {value}")
-    
+#sett
+set1 = set()
+print(set1)
+
+set1 = set("GeeksForGeeks")
+print(set1)
+
+# Creating a Set with the use of a List
+set1 = set(["Geeks", "For", "Geeks"])
+print(set1)
+
+# Creating a Set with the use of a tuple
+tup = ("Geeks", "for", "Geeks")
+print(set(tup))
+
+# Creating a Set with the use of a dictionary
+d = {"Geeks": 1, "for": 2, "Geeks": 3}
+print(set(d))
+#
+# Using Remove Method
+set1 = {1, 2, 3, 4, 5}
+set1.remove(3)
+print(set1)  
+
+# Attempting to remove an element that does not exist
+try:
+    set1.remove(10)
+except KeyError as e:
+    print("Error:", e)  
+
+# Using discard() Method
+set1.discard(4)
+print(set1)  
+
+# Attempting to discard an element that does not exist
+set1.discard(10)  # No error raised
+print(set1)
+#pop removes but you dont know which elemnt as it is unorderd.
+set1 = {1, 2, 3, 4, 5}
+val = set1.pop()
+print(val)
+print(set1)
+
+# Using pop on an empty set
+set1.clear()  # Clear the set to make it empty
+try:
+    set1.pop()
+except KeyError as e:
+    print("Error:", e)
+#typecasting other datattype in set with set() constructor
+
+# Typecasting list into set
+li = [1, 2, 3, 3, 4, 5, 5, 6, 2]
+set1 = set(li)
+print(set1)
+# Typecasting string into set
+s = "GeeksforGeeks"
+set1 = set(s)
+print(set1)
+# Typecasting dictionary into set
+d = {1: "One", 2: "Two", 3: "Three"}
+set1 = set(d)
+print(set1)
