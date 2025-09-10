@@ -152,3 +152,86 @@ print(set1)
 d = {1: "One", 2: "Two", 3: "Three"}
 set1 = set(d)
 print(set1)
+"""Python Arrsy
+numpy array
+python array"""
+"""# In Python, arrays are created using array.array(typecode, initializer).  
+# typecode decides the data type (e.g., 'i' for int, 'f' for float), and initializer provides the values.  
+"""
+print("__ARRAY__")
+import array as arr
+a = arr.array('i', [1, 2, 3])
+# accessing First Araay
+print(a[0])
+# adding element to array
+a.append(5)
+print(a)
+# insert
+import array as arr
+a = arr.array('i', [1, 2, 3])
+print(*a)
+a.insert(1, 4)  # Insert 4 at index 1
+print(*a)
+#indexing
+import array as arr
+a = arr.array('i', [1, 2, 3, 4, 5, 6])
+print(a[0])
+print(a[3])
+b = arr.array('d', [2.5, 3.2, 3.3])
+print(b[1])
+print(b[2])
+# remove() pop()
+import array
+a = array.array('i', [1, 2, 3, 1, 5])
+# remove first occurance of 1
+a.remove(1)
+print(a)
+# remove item at index 2
+a.pop(2)
+print(a)
+#slicing
+import array as arr
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+b = arr.array('i', a)
+res = a[3:8]
+print(res)
+res = a[5:]
+print(res)
+res = a[:]
+print(res)
+#searching element in an array
+import array
+a = array.array('i', [1, 2, 3, 1, 2, 5])
+# index of 1st occurrence of 2
+print(a.index(2))
+# index of 1st occurrence of 1
+print(a.index(1))
+#updating elment in an array
+import array
+a = array.array('i', [1, 2, 3, 1, 2, 5])
+
+# update item at index 2
+a[2] = 6
+print(a)
+
+# update item at index 4
+a[4] = 8
+print(a)
+#count
+import array
+a = array.array('i', [1, 2, 3, 4, 2, 5, 2])
+
+count = a.count(2)
+print(count)
+#extend
+import array as arr 
+a = arr.array('i', [1, 2, 3,4,5])
+
+a.extend([6,7,8,9,10])
+print(a)
+#reverse
+import array
+a = array.array('i', [1, 2, 3, 4, 5])
+a.reverse()
+print(*a)
+#LIST COMPREHENSION
