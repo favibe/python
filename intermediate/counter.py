@@ -89,4 +89,30 @@ for k, v in od.items():
 od1 = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
 od2 = OrderedDict([('c', 3), ('b', 2), ('a', 1)])
 print(od1 == od2)
+#reverse
+d1 = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+d2 = OrderedDict(reversed(list(d1.items())))
+for k, v in d2.items():
+    print(k, v)
+#pop last or first item
+d = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+res = d.popitem(last=True)  # Remove last inserted item
+print(res)
+# move_to_end
+d = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+
+d.move_to_end('a')         # Move 'a' to end
+d.move_to_end('b', last=False)  # Move 'b' to front
+
+for k, v in d.items():
+    print(k, v)
+# deleting re-inserting key
+od.pop('c')    # Delete 'c'
+
+for k, v in od.items():
+    print(k, v)
+
+od['c'] = 3    # Re-insert 'c' at end
+for k, v in od.items():
+    print(k, v)
 #
