@@ -56,5 +56,37 @@ Intersection (&) → only keys in both, counts = min
 Union (|) → all keys, counts = max"""
 #OrderedDict in Python
 #from collections import OrderedDict
+print("---OrderedDict---")
 from collections import OrderedDict
+od = OrderedDict()
+od['apple'] = 2 #like key['apple] value =2
+od['banana'] = 2
+od['cherry'] = 3
+print(list(od.items()))
+print("Comparing with dict though py 3.7 updward comed in order of created")
+d = {}
+d['a'] = 1
+d['b'] = 2
+d['c'] = 3
+d['d'] = 4
+for key, val in d.items():
+    print(key, val)
 
+print("ordered dict compared")
+od = OrderedDict()
+od['d'] = 4
+od['b'] = 2
+od['a'] = 1
+od['c'] = 3
+for key, val in od.items():
+    print(key, val)
+#changing value does not affect order
+od = OrderedDict([('a', 1), ('b', 2), ('c', 3), ('d', 4)])
+od['c'] = 5  
+for k, v in od.items():
+    print(k, v)
+#Equality Check
+od1 = OrderedDict([('a', 1), ('b', 2), ('c', 3)])
+od2 = OrderedDict([('c', 3), ('b', 2), ('a', 1)])
+print(od1 == od2)
+#
