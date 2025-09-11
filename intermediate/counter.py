@@ -241,6 +241,80 @@ print(dq)
 # 3. Reversing the deque
 dq.reverse()  # Reverse the deque
 print(dq)
+#heapq
+"""A heap queue (also called a priority queue) is a special data structure that 
+allows quick access to the smallest (min-heap) or largest (max-heap) element. 
+In Python, heaps are implemented as min-heaps by default, meaning the smallest element
+is always at the root of the structure, making it efficient to access."""
+import heapq
+li = [10, 23, 25, 30,2]
+#converting the list to heapq
+heapq.heapify(li)
+print("heap queue is:", li)
+"""Using Heap as a Max-Heap
+By default, Python's heapq implements a min-heap. To create a max-heap, you can simply invert the values 
+(store negative numbers).
+Example: convert a list into a max-heap by 
+storing negative numbers and then retrieve the largest element:"""
+nums =[10, 20, 15, 30, 40]
+#converting to a heap-max
+max_heap = [-n for n in nums]
+heapq.heapify(max_heap)
+print(max_heap)
+# Access largest element (invert sign again)  
+print("Largest element:", -max_heap[0])
+#Appending and Popping Elements
+# Creating an initial heap
+h = [10, 20, 15, 30, 40]
+heapq.heapify(h)
+# Appending an element
+heapq.heappush(h, 5)
+# Heap before popping
+print(h)
+# Pop the smallest element from the heap
+min = heapq.heappop(h)
+print("Smallest:", min)
+print(h)
+#Appending and Popping Simultaneously
+
+# Creating a heap
+h = [10, 20, 15, 30, 40]
+heapq.heapify(h)
+# Push a new element (5) and pop the smallest element at the same time
+min = heapq.heappushpop(h, 5)
+print(min)
+print(h) #heappushpop(h, 5) first pushes 5 into the heap and immediately pops the smallest element (which is also 5)
+#ex2
+h = [10, 20, 15, 30, 40]
+heapq.heapify(h)
+# Push a new element (33) and pop the smallest element at the same time
+min = heapq.heappushpop(h, 33)
+print(min) #pop 10, push 33
+print(h)
+
+#Finding Largest and Smallest Elements using nlargest() and nsmallest() function
+# Creating a heap
+h = [10, 20, 15, 30, 40]
+heapq.heapify(h)
+# Find the 3 largest elements
+maxi = heapq.nlargest(3, h)
+print("3 largest elements:", maxi)
+# Find the 3 smallest elements
+min = heapq.nsmallest(3, h)
+print("3 smallest elements:", min)
+#Replace and Merge Operations
+# Creating a heap
+h1 = [10, 20, 15, 30, 40]
+heapq.heapify(h1)
+# Replacing the smallest element (10) with 5
+min = heapq.heapreplace(h1, 5)
+print(min)
+print(h1)
+# Merging Heaps
+h2 = [2, 4, 6, 8]
+# Merging the lists
+h3 = list(heapq.merge(h1, h2))
+print("Merged heap:", h3)
 
 """
 Counter ✔
@@ -249,7 +323,7 @@ DefaultDict ✔
 UserList
 UserString
 NamedTuple
-Deque
-Heapq
+Deque ✔
+Heapq ✔
 UserDict
 ChainMap"""
