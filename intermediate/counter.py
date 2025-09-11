@@ -115,12 +115,7 @@ for k, v in od.items():
 od['c'] = 3    # Re-insert 'c' at end
 for k, v in od.items():
     print(k, v)
-#DefaultDict
-"""In Python, defaultdict is a subclass of the built-in dict class from the collections module.
- It automatically assigns a default value to keys that do not exist, which means you 
- don't have to manually check for missing keys and avoid KeyError."""
-print("____ OrderedDict here ____")
-from collections import defaultdict
+#more OrderedDict practice
 d = OrderedDict()
 d["cake"] = 3
 d["Ballons"] = 20
@@ -154,10 +149,47 @@ print(d3)
 d3['Ballons'] = 30 #reinsert it
 print(d3)
 
+print("____--DefaultDict Here..--____")
+#DefaultDict
+"""In Python, defaultdict is a subclass of the built-in dict class from the collections module.
+ It automatically assigns a default value to keys that do not exist, which means you 
+ don't have to manually check for missing keys and avoid KeyError."""
+from collections import defaultdict 
+dd= defaultdict(list)
+dd['fruits'].append('apple')
+dd['vegetables'].append('carrot')
+print(dd)
+print(dd['juices']) #not assign would not throw keyerror would be []
+#ex2
+dd1 = defaultdict(int)
+a = [1,2,3,4,2,1,1,2]
+for x in a:
+    dd1[x] +=1 #count oocurance in the list and update
+print(dd1)
+#using for grouping stuff
+from collections import defaultdict
+words = ["apple", "ant", "banana", "bat", "carrot", "cat", "drone", "brocolii"]
+grouped = defaultdict(list)
+for word in words:
+    grouped[word[0]].append(word)
+print(grouped)
+# Using str as the factory function
+sd = defaultdict(str)
+sd['greeting'] = 'Hello'
+print(sd)
+#ex3
+tuple_list = [("A",5), ("B",3),("A",4),("C",3),("D",4),("A",5),("B",5)]
+grouped_data = defaultdict(list)
+for key,value in tuple_list:
+    grouped_data[key].append(value)
+print(grouped_data)
+#if you want to sym them up
+grouped_data = {k:sum(v) for k, v in grouped_data.items()}
+print(grouped_data)
 """
 Counter ✔
 OrderDict ✔
-DefaultDict
+DefaultDict ✔
 UserList
 UserString
 NamedTuple
