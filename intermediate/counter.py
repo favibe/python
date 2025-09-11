@@ -115,4 +115,53 @@ for k, v in od.items():
 od['c'] = 3    # Re-insert 'c' at end
 for k, v in od.items():
     print(k, v)
-#
+#DefaultDict
+"""In Python, defaultdict is a subclass of the built-in dict class from the collections module.
+ It automatically assigns a default value to keys that do not exist, which means you 
+ don't have to manually check for missing keys and avoid KeyError."""
+print("____ OrderedDict here ____")
+from collections import defaultdict
+d = OrderedDict()
+d["cake"] = 3
+d["Ballons"] = 20
+d["drinks"] = 23
+print(d)
+print(list(d.items()))
+#using for loop (NOTICE THE.items() for printiong)
+for k,v in d.items():
+    print(k,v)
+d2 = OrderedDict([("cake", 3), ("drinks",23),("Ballons",20)])
+d3 = OrderedDict([("cake", 3),("Ballons", 20), ("drinks",23)])
+#equality check( now d3 will be fslse in orderedDict cause order must be same, but in normal dict woold be True)
+print(d == d2)
+print(d==d3)
+#changing value does ot affect the order of creation
+d2["Ballons"] = 33
+print(f"the value of {d2} didn't change")
+d2.move_to_end("cake") #move cake to end
+d2.move_to_end("Ballons", last=False)  # move ballons to front
+print(d2)
+#can reverse order of creation
+d4 =OrderedDict(reversed(list(d3.items())))
+for k,v in d4.items():
+    print(k,v)
+#popitem
+pops = d4.popitem(last=True) #Pop last item. IF False pop first item
+print(pops) #code removes and return the last item
+# Deleting and re-inserting keys
+d3.pop("Ballons") # delecte/remobve like popitem
+print(d3)
+d3['Ballons'] = 30 #reinsert it
+print(d3)
+
+"""
+Counter ✔
+OrderDict ✔
+DefaultDict
+UserList
+UserString
+NamedTuple
+Deque
+Heapq
+UserDict
+ChainMap"""
