@@ -186,6 +186,62 @@ print(grouped_data)
 #if you want to sym them up
 grouped_data = {k:sum(v) for k, v in grouped_data.items()}
 print(grouped_data)
+
+#deque
+print("-----Deque-----")
+"""A deque stands for Double-Ended Queue. It is a special type of data structure 
+that allows you to add and remove elements from both ends efficiently.
+Unlike normal queues (which usually follow First In, First Out), a deque 
+supports both FIFO and LIFO operations. This makes it very flexible and useful in 
+real-world applications like task scheduling, sliding window problems and real-time data processing."""
+#aAppending and delelting element from a deque
+from collections import deque
+dq = deque([])
+#add elemnt to the right
+dq.append(50)
+#adds elemnt to the left
+dq.appendleft(40)
+print(dq)
+#extend[iterable] #more than 1 elemnt to the right
+dq.extend([60,70,80])
+print("After extend(right):",dq)
+##extendleft[iterable] #more than 1 elemnt to the left
+dq.extendleft([30,20,10])# cause extend adds in reverse order
+print("After extendlenft:",dq)
+#remove method
+dq.remove(70)
+print("After remove(70):", dq)
+# Remove elements from the right
+dq.pop()
+# Remove elements from the left
+dq.popleft()  
+print("After pop and popleft:", dq)
+#clear all elemnt
+dq.clear()  # deque: []
+print("After clear():", dq)
+
+#Accessing Item and length of deque
+dq =deque([1,2,3,3,4,2,4])
+#acessing by index can be +ve or -ve
+print(dq[0])
+print(dq[-1])
+#find length 
+print(len(dq))
+
+#Count, Rotation and Reversal of a deque
+dq = deque([10, 20, 30, 40, 50, 20, 30, 20])
+#Counting occurrences of a value
+print(dq.count(20))  # Occurrences of 20
+print(dq.count(30))  # Occurrences of 30
+#rotating of deque
+dq.rotate(2)  # Rotate the deque 2 steps to the right
+print(dq)
+dq.rotate(-3)  # Rotate the deque 3 steps to the left
+print(dq)
+# 3. Reversing the deque
+dq.reverse()  # Reverse the deque
+print(dq)
+
 """
 Counter ✔
 OrderDict ✔
