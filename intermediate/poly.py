@@ -42,3 +42,34 @@ animals =[Dog(), Cat(), Animal()]
 for animal in  animals:
     print(animal.sound())
 
+#Polymorphism in Built-in Functions
+"""Python’s built-in functions like len() and max() are polymorphic they work with different
+ data types and return results based on type of object passed."""
+print(len("Hello")) #strings
+print(len([2, 4, 6, 7]))
+
+print(max(1, 3, 2))  # Maximum of integers
+print(max("a", "z", "m"))  # Maximum in strings
+
+#Polymorphism in Functions
+"""In Python, polymorphism lets functions accept different object types as long as they support needed behavior"""
+class Pen:
+    def ude(self):
+        return "writing"
+    
+class Eraser:
+    def use(self):
+        return "Erasing"
+
+def perform_task(tool):
+    print(tool.use())    
+
+perform_task(Pen())  
+perform_task(Eraser())        
+
+#Polymorphism in Operators
+"""In Python, same operator (+) can perform different tasks depending on operand types. 
+This is known as operator overloading. This flexibility is a key aspect of polymorphism in Python."""
+print(5 + 10)  # Integer addition
+print("Hello " + "World!")  # String concatenation
+print([1, 2] + [3, 4])  # List concatenation
