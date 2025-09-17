@@ -25,5 +25,20 @@ print(calc.multiply(2, 3, 4))
 #2. Runtime Polymorphism (Overriding)
 """Runtime polymorphism means that the behavior of a method is decided while program is running, 
 based on the object calling it."""
+class Animal:
+    def sound(self):
+        return "Any Generic Sound"
 
+class Dog(Animal):
+    def sound(self):
+        return "Bark"
+
+class Cat(Animal):
+    def sound(self):
+        return "Meow"    
+
+#polymorphism  Behaviour
+animals =[Dog(), Cat(), Animal()]
+for animal in  animals:
+    print(animal.sound())
 
